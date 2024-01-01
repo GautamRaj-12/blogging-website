@@ -1,9 +1,15 @@
 import "./loginModal.css";
-const LoginModal = () => {
+const LoginModal = ({ modalVisibleValue , onCloseClick}) => {
+  const handleCloseClick = () =>{
+    onCloseClick();
+  }
   return (
     <>
-      <div className="modal__container">
+      <div className={`modal__container ${modalVisibleValue?"show":""}`}>
         <div className="modal">
+          <div onClick={handleCloseClick}>
+            <i className="fa-solid fa-xmark"></i>
+          </div>
           <div>
             <p>Welcome to Rohan's Desk</p>
           </div>
@@ -14,17 +20,15 @@ const LoginModal = () => {
             <div className="form__input form__input-email">
               <input type="password" placeholder="Password" />
             </div>
-            <button>Sign Up</button>
+            <button>Log In</button>
           </form>
           <div>
             <div>
-              <div>
-                <input type="checkbox" name="" id="rememberMe" />
-                <label htmlFor="rememberMe">Remember Me</label>
-              </div>
-              <div>
-                <p><a href="#">Forgot Password?</a></p>
-              </div>
+              <input type="checkbox" id="rememberMe" />
+              <label htmlFor="rememberMe">Remember Me</label>
+            </div>
+            <div>
+              <a>Forgot Password</a>
             </div>
           </div>
         </div>

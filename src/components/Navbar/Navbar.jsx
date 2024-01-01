@@ -1,5 +1,5 @@
-import "./navbar.css"
-const Navbar = () => {
+import "./navbar.css";
+const Navbar = ({onLoginClick}) => {
   return (
     <>
       <nav className="navbar">
@@ -8,12 +8,8 @@ const Navbar = () => {
           <li className="navbar__item">Home</li>
           <li className="navbar__item">About</li>
           <li className="navbar__item">Contact</li>
-          <li className="navbar__item">
-            <button>Login</button>
-          </li>
-          <li className="navbar__item">
-            <button>Signup</button>
-          </li>
+          <li className="navbar__item" onClick={onLoginClick}>Login</li>
+          <li className="navbar__item">Signup</li>
         </ul>
       </nav>
     </>

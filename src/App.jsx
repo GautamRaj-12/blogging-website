@@ -1,12 +1,10 @@
-import LoginModal from "./components/LoginModal/LoginModal"
-import Navbar from "./components/Navbar/Navbar"
+import Home from "./pages/Home"
 
 function App() {
 
   return (
     <>
-      <Navbar/>
-      <LoginModal/>
+      <Home/>
     </>
   )
 }
