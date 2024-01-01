@@ -1,3 +1,4 @@
+import LoginModal from "./components/LoginModal/LoginModal"
 import Navbar from "./components/Navbar/Navbar"
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
       <Navbar/>
+      <LoginModal/>
     </>
   )
 }
