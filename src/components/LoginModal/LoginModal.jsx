@@ -1,35 +1,43 @@
 import "./loginModal.css";
-const LoginModal = ({ modalVisibleValue , onCloseClick}) => {
-  const handleCloseClick = () =>{
+const LoginModal = ({ modalVisibleValue, onCloseClick }) => {
+  const handleCloseClick = () => {
     onCloseClick();
-  }
+  };
   return (
     <>
-      <div className={`modal__container ${modalVisibleValue?"show":""}`}>
+      <div className={`modal__container ${modalVisibleValue ? "show" : ""}`}>
         <div className="modal">
           <div onClick={handleCloseClick}>
-            <i className="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-xmark close__button"></i>
           </div>
-          <div>
+          <div className="modal__heading">
             <p>Welcome to Rohan's Desk</p>
           </div>
           <form className="form">
             <div className="form__input form__input-email">
-              <input type="email" placeholder="Email" />
+              <i className="fa-solid fa-at at__icon"></i>
+              <input
+                type="email"
+                placeholder="Email"
+                className="email__input"
+              />
             </div>
-            <div className="form__input form__input-email">
-              <input type="password" placeholder="Password" />
+            <div className="form__input form__input-password">
+              <i className="fa-solid fa-lock lock__icon"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                className="password__input"
+              />
             </div>
-            <button>Log In</button>
+            <button className="login__button">Log In</button>
           </form>
-          <div>
-            <div>
-              <input type="checkbox" id="rememberMe" />
+          <div className="remember__forgot">
+            <div className="remember__me">
+              <input type="checkbox" id="rememberMe" className="remember__input"/>
               <label htmlFor="rememberMe">Remember Me</label>
             </div>
-            <div>
-              <a>Forgot Password</a>
-            </div>
+            <a>Forgot Password?</a>
           </div>
         </div>
       </div>
