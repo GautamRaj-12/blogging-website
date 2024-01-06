@@ -1,0 +1,22 @@
+.contact{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.social__media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap:3rem;
+}
+.social__media a{
+    transition: transform 0.3s ease;
+}
+.social__media a:hover{
+    transform: scale(2);
+}
