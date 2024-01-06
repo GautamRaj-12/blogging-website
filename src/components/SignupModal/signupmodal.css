@@ -1,0 +1,70 @@
+.modal__container{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: #666;
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    color:#999;
+}
+.modal__container.show{
+    opacity: 1;
+    pointer-events:auto;
+}
+.modal{
+    position: relative;
+    background-color: #333;
+    padding:5rem;
+    border-radius: 5px;
+}
+.modal__heading{
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.form__input{
+    border-bottom:1px solid #aaa;
+    display: flex;
+    gap:1rem;
+    margin-bottom: 1rem;
+}
+.email__input,.password__input,.cpassword__input{
+    border:none;
+    outline:none;
+    background-color: #333;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    color:#888;
+}
+input::placeholder{
+    color:#999;
+}
+.login__button{
+    width: 100%;
+    padding:0.4rem 0;
+    background-color:#07bd71;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    font-weight: bold;
+    color: #fff;
+}
+.account__exists{    
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.close__button{
+    position: absolute;
+    font-size: 2rem;
+    top:1rem;
+    right:1rem;
+    cursor: pointer;
+}

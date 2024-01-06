@@ -1,11 +1,11 @@
-import "./loginModal.css";
-const LoginModal = ({ loginModalVisibleValue, onCloseClick }) => {
+import "./signupmodal.css";
+const SignupModal = ({ signupModalVisibleValue, onCloseClick }) => {
   const handleCloseClick = () => {
     onCloseClick();
   };
   return (
     <>
-      <div className={`modal__container ${loginModalVisibleValue ? "show" : ""}`}>
+      <div className={`modal__container ${signupModalVisibleValue ? "show" : ""}`}>
         <div className="modal">
           <div onClick={handleCloseClick}>
             <i className="fa-solid fa-xmark close__button"></i>
@@ -30,18 +30,22 @@ const LoginModal = ({ loginModalVisibleValue, onCloseClick }) => {
                 className="password__input"
               />
             </div>
-            <button className="login__button">Log In</button>
-          </form>
-          <div className="remember__forgot">
-            <div className="remember__me">
-              <input type="checkbox" id="rememberMe" className="remember__input"/>
-              <label htmlFor="rememberMe">Remember Me</label>
+            <div className="form__input form__input-cpassword">
+              <i className="fa-solid fa-lock lock__icon"></i>
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                className="cpassword__input"
+              />
             </div>
-            <a>Forgot Password?</a>
+            <button className="login__button">Sign Up</button>
+          </form>
+          <div className="account__exists">
+            <p>Already have an account? <a>Log in</a></p>
           </div>
         </div>
       </div>
     </>
   );
 };
-export default LoginModal;
+export default SignupModal;

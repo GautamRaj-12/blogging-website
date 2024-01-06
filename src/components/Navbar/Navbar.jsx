@@ -1,5 +1,5 @@
 import "./navbar.css";
-const Navbar = ({onLoginClick}) => {
+const Navbar = ({onLoginClick,onSignupClick}) => {
   return (
     <>
       <nav className="navbar">
@@ -9,7 +9,7 @@ const Navbar = ({onLoginClick}) => {
           <li className="navbar__item">About</li>
           <li className="navbar__item">Contact</li>
           <li className="navbar__item" onClick={onLoginClick}>Login</li>
-          <li className="navbar__item">Signup</li>
+          <li className="navbar__item" onClick={onSignupClick}>Signup</li>
         </ul>
       </nav>
     </>
